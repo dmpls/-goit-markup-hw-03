@@ -16,13 +16,8 @@
     --black-text-color: #000000;
     --address-text-color: rgba(255, 255, 255, 0.6);
 
-
-    
-    
-
-
-
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -73,13 +68,16 @@ img{
     padding-left: 15px;
     padding-right: 15px;
 
-    outline: 1px solid red;
+    
 }
 .section{
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
+.main{
+    flex: 1 1 auto;
+}
 /* HOWER AND FOCUS  */
 .nav-menu .link:hover,
 .nav-menu .link:focus,
@@ -102,6 +100,17 @@ color: var(--header-bg-color);
     background-color: var(--header-bg-color);
     border: 1px solid var(--header-bd-color);
 }
+.header-container{
+    display: flex;
+    align-items: center;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+.nav-logo{
+    margin-right: 93px;
+}
 .nav-logo,
 .footer-logo{
     font-family: 'Raleway', sans-serif;
@@ -114,6 +123,11 @@ color: var(--header-bg-color);
 }
 .logo-studio{
  color: var(--black-text-color);
+}
+.nav-menu{
+    display: flex;
+    gap: 50px
+;
 }
 .nav-menu .link{
     display: block;
@@ -128,6 +142,11 @@ color: var(--header-bg-color);
 
     color: var(--primary-text-color);
 
+}
+.header-contacts-menu{
+    display: flex;
+    margin-left: auto;
+    gap: 50px;
 }
 .header-contacts-menu .link{
     
@@ -191,6 +210,10 @@ color: var(--header-bg-color);
 .features{
     background-color: var(--features-works-bg-color);
 }
+.features-nav{
+    display: flex;
+    gap: 30px;
+}
 .features-nav > .item{
     width: 270px;
     max-height: 141px;
@@ -221,14 +244,24 @@ color: var(--header-bg-color);
     padding-top: 0px;
 }
 .works-title{
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.166;
     text-align: center;
     letter-spacing: 0.03em;
 }
+.works-list{
+    display: flex;
+    gap: 30px;
+}
 .team{
     padding-top: 186px;
     background-color: var(--team-bg-color);
+}
+.team-menu{
+    display: flex;
+    gap: 30px;
+
 }
 .team-menu > .item {
     width: 270px;
@@ -295,10 +328,16 @@ color: var(--header-bg-color);
 
 /* PORTFOLIO - MAIN  */
 
-.portfolio-works{
-
+.portfolio-flex{
+    display: flex;
 }
 .portfolio-nav{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+   
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
 }
 .portfolio-button{
@@ -345,8 +384,13 @@ color: var(--header-bg-color);
 
     color: var(--secondary-text-color);
 }
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 .portfolio-list > .item{
-    width: 370px;
+    width: calc((100% - 30px * 2)/3);
     border: 1px solid var(--border-color);
     background-color: var(--header-bg-color);
 }
